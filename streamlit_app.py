@@ -3,8 +3,8 @@ import streamlit as st
 
 # Load models
 lr_model = joblib.load('logistic_regression_model.pkl')
-rf_model = joblib.load('random_forest_model.pkl')
-svm_model = joblib.load('svm_model.pkl')
+#rf_model = joblib.load('random_forest_model.pkl')
+#svm_model = joblib.load('svm_model.pkl')
 
 # App title and description
 st.title("Sentiment Analysis System")
