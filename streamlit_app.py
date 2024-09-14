@@ -3,8 +3,8 @@ import streamlit as st
 
 # Load models
 lr_model = joblib.load('logistic_regression_model.pkl')
-#rf_model = joblib.load('random_forest_model.pkl')
-#svm_model = joblib.load('svm_model.pkl')
+rf_model = joblib.load('random_forest_model.pkl')
+svm_model = joblib.load('svm_model.pkl')
 
 # App title and description
 st.title("Sentiment Analysis System")
@@ -36,10 +36,10 @@ if st.sidebar.button("Predict"):
         # Predict using the selected model
         if model_option == "Logistic Regression":
             prediction = lr_model.predict([user_input])
-        # elif model_option == "Random Forest":
-        #     prediction = rf_model.predict([user_input])
-        # elif model_option == "SVM":
-        #     prediction = svm_model.predict([user_input])
+         elif model_option == "Random Forest":
+             prediction = rf_model.predict([user_input])
+         elif model_option == "SVM":
+             prediction = svm_model.predict([user_input])
 
         # Display the prediction result
         st.subheader("Prediction Result")
