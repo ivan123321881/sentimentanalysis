@@ -36,10 +36,10 @@ if st.sidebar.button("Predict"):
         # Predict using the selected model
         if model_option == "Logistic Regression":
             prediction = lr_model.predict([user_input])
-        elif model_option == "Random Forest":
-            prediction = rf_model.predict([user_input])
-        elif model_option == "SVM":
-            prediction = svm_model.predict([user_input])
+        # elif model_option == "Random Forest":
+        #     prediction = rf_model.predict([user_input])
+        # elif model_option == "SVM":
+        #     prediction = svm_model.predict([user_input])
 
         # Display the prediction result
         st.subheader("Prediction Result")
